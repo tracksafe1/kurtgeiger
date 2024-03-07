@@ -83,6 +83,7 @@ public class WomenSneakersPage extends Utility {
         clickOnElement(LaneyOctaviaSneaker);
     }
     public void sizeSelected(){
+        log.info("clicking on size and selecting it");
        clickOnElement(size);
        clickOnElement(size37);
     }
@@ -90,10 +91,12 @@ public class WomenSneakersPage extends Utility {
         clickOnElement(AddToBag);
     }
     public void mouseHoverOnBagIcon(){
+        log.info("clicking on BagIcon and  clicking on checkoutSecurely");
         mouseHoverToElement(BagIcon);
         clickOnElement(checkoutSecurely);
     }
     public void setCheckoutSecurely1(){
+        log.info("  clicking on checkoutSecurely");
         clickOnElement(checkoutSecurely1);
     }
 }

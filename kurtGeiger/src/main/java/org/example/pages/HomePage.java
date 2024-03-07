@@ -65,12 +65,7 @@ public class HomePage extends Utility {
         clickOnElement(NoThanks);
     }
 
-    public void clickOnAccountIcon() {
-        clickOnElement(AccountIcon);
-    }
 
-    public void clickOnCreateAccount() {
-        clickOnElement(createAccount);
-    }
+
 }
 

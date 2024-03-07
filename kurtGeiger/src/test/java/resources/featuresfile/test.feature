@@ -23,9 +23,9 @@ Feature:Framework Test
     And click on NO THANKS
     And mousehover on sort by
     And select radiobutton Bestsellers
-   # And mousehover on Filters
-  # And  select size
-  # And click on Apply Filters
+    And mousehover on Filters
+    And  select size
+   And click on Apply Filters
     And click on Lania Octavia Sneaker
     And click on size and select size
     And click on Add to Bag

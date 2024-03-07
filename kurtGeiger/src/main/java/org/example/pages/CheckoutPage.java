@@ -2,12 +2,20 @@ package org.example.pages;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import freemarker.log.Logger;
+import org.apache.log4j.LogManager;
 import org.example.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage extends Utility {
+    private static final org.apache.log4j.Logger log = LogManager.getLogger(CheckoutPage.class.getName());
+
+    public CheckoutPage() {
+        PageFactory.initElements(driver, this);
+    }
     @CacheLookup
     @FindBy(xpath = "//input[@id='customer-email']")
     WebElement email;
@@ -29,7 +37,7 @@ public class CheckoutPage extends Utility {
     @FindBy(xpath = "//input[@id='to-collection-point']")
     WebElement clickAndCollectFree;
     @CacheLookup
-    @FindBy(xpath = "//input[@id='WHVGAV8']")
+    @FindBy(css = "#custom-checkout-form-collect [class='input-text']")
     WebElement postCode;
     @CacheLookup
     @FindBy(xpath = "//tbody/tr[1]/td[1]/label[1]/div[1]")
@@ -50,35 +58,43 @@ public class CheckoutPage extends Utility {
     }
 
     public void setMobileNumber() {
+
+        log.info("Enter Mobile Number");
         sendTextToElement(mobileNumber, "07517404443");
     }
 
     public void clickOnNext() {
+        log.info("Enter Mobile Number");
         clickOnElement(next);
     }
 
     public void setSignInButton() {
+        log.info("Enter Mobile Number");
         clickOnElement(signInButton);
     }
 
 
     public void clickRadioButton() {
+        log.info("Enter Mobile Number");
         clickOnElement(clickAndCollectFree);
     }
 
     public void clickOnFindCollectionPoint() {
-        clickOnElement(findCollectionPoint);
+
+        log.info("Enter Mobile Number");clickOnElement(findCollectionPoint);
     }
 
-    public void enterPostCode() {
-        sendTextToElement(postCode, "WD63QJ");
+    public void enterPostCode(String Postcode) {
+        log.info("Enter Postcode");
+        sendTextToElement(postCode, Postcode);
     }
 
-    public void selectWatfordOutlet() {
+    public void selectWatfordOutlet() {log.info("Selecting Watford Outlet");
         clickOnElement(watfordOutlet);
     }
 
     public void setReviewAndPay() {
+        log.info("Click on Review and Pay");
         clickOnElement(reviewAndPay);
     }
 }
