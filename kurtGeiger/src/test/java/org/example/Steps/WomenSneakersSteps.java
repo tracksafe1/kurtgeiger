@@ -4,8 +4,8 @@ import cucumber.api.java.en.And;
 import org.example.pages.WomenSneakersPage;
 
 public class WomenSneakersSteps {
-    @And("^mousehover on sort by$")
-    public void mousehoverOnSortBy() {
+    @And("^mouseHover on sort by$")
+    public void mouseHoverOnSortBy() throws InterruptedException {
         new WomenSneakersPage().mouseHoverSortby();
     }
 
@@ -14,28 +14,9 @@ public class WomenSneakersSteps {
         new WomenSneakersPage().mouseHoverAndClickBestsellers();
     }
 
+    @And("^click on Laney Octavia Sneaker$")
+    public void clickOnLaneyOctaviaSneaker() throws InterruptedException {
 
-
-
-    @And("^mousehover on Filters$")
-    public void mousehoverOnFilters() {
-        new WomenSneakersPage().mouseHoverFilters();
-    }
-
-
-
-    @And("^click on Apply Filters$")
-    public void clickOnApplyFilters() {
-        new WomenSneakersPage().clickOnAppliedFilters();
-    }
-
-    @And("^select size$")
-    public void selectSize() {
-        new WomenSneakersPage().SelectSize();
-    }
-
-    @And("^click on Lania Octavia Sneaker$")
-    public void clickOnLaniaOctaviaSneaker() {
         new WomenSneakersPage().clickOnLaneyOctaviaSneaker();
     }
 
@@ -49,13 +30,14 @@ public class WomenSneakersSteps {
         new WomenSneakersPage().clickAddToBag();
     }
 
-    @And("^mousehover on bag icon and click on checkout page$")
-    public void mousehoverOnBagIconAndClickOnCheckoutPage() {
+    @And("^mouseHover on bag icon and click on checkout page$")
+    public void mouseHoverOnBagIconAndClickOnCheckoutPage() {
+
         new WomenSneakersPage().mouseHoverOnBagIcon();
     }
 
     @And("^click on checkout securely$")
-    public void clickOnCheckoutSecurely() {
+    public void clickOnCheckoutSecurely() throws InterruptedException {
         new WomenSneakersPage().setCheckoutSecurely1();
     }
 }

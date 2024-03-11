@@ -5,13 +5,11 @@ import org.example.driverfactory.ManageDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
-import java.util.function.Function;
+
 
 public class Utility extends ManageDriver {
    //  * This method will be used to hover mouse on element
@@ -25,11 +23,6 @@ public class Utility extends ManageDriver {
     public void clickOnElement(WebElement element) {
         element.click();
     }
-
-    public String getTextFromElement(WebElement element) {
-        return element.getText();
-    }
-
     public void sendTextToElement(WebElement element, String str) {
         element.sendKeys(str);
     }

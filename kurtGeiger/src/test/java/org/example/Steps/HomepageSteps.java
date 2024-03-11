@@ -15,7 +15,7 @@ public class HomepageSteps {
     }
 
     @When("^I click on accept cookies$")
-    public void userClicksOnAcceptCookies() {
+    public void userClicksOnAcceptCookies() throws InterruptedException {
         new HomePage().clickAcceptCookies();
     }
 
@@ -27,14 +27,14 @@ public class HomepageSteps {
 
 
     @And("^click on NO THANKS$")
-    public void clickOnNOTHANKS() {
+    public void clickOnNOTHANKS() throws InterruptedException {
+        Thread.sleep(2000);
         new HomePage().clickingNoThanks();
     }
 
 
-
-    @And("^then click on Sneakers$")
-    public void thenClickOnSneakers() {
+    @And("^click on Sneakers$")
+    public void clickOnSneakers(){
         new HomePage().selectingSneakers();
-    }
-}
+    }}
+

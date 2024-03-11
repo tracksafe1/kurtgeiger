@@ -2,6 +2,7 @@ package org.example.Steps;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import org.example.pages.CheckoutPage;
 
 import static org.example.driverfactory.ManageDriver.driver;
@@ -33,20 +34,21 @@ public class CheckoutSteps {
 
     @And("^Enter MobileNumber$")
     public void enterMobileNumber() {
-        new CheckoutPage().setMobileNumber();
-       // driver.navigate().refresh();
+        new CheckoutPage().setMobileNumber("7777777777");
+      //  driver.navigate().refresh();
     }
 
     @And("^click on click and collect Radiobutton$")
-    public void clickOnClickAndCollectRadiobutton()  {
-      //  new CheckoutPage().setMobileNumber();
+    public void clickOnClickAndCollectRadiobutton() throws InterruptedException {
+        Thread.sleep(3000);
+       // new CheckoutPage().setMobileNumber("7777777777");
         new CheckoutPage().clickRadioButton();
     }
 
 
     @And("^enter post code and click on find collection point search$")
     public void enterPostCodeAndClickOnFindCollectionPointSearch() {
-        new CheckoutPage().enterPostCode("HA55DS");
+        new CheckoutPage().enterPostCode("WD63QJ");
         new CheckoutPage().clickOnFindCollectionPoint();
     }
 
@@ -54,8 +56,8 @@ public class CheckoutSteps {
     public void selectOutlet() {
         new CheckoutPage().selectWatfordOutlet();
     }
-    @And("^click on review and pay$")
-    public void clickOnReviewAndPay() {
+    @Then("^click on review and pay$")
+    public void clickOnReviewAndPay() throws InterruptedException {
         new CheckoutPage().setReviewAndPay();
     }
 

@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
                 "json:target/RunCuke/cucumber.json"},
-        tags = {"@Regression"}
+        tags = {"@Sanity"}
 )
 public class TestRunner {
     @AfterClass
@@ -24,7 +24,7 @@ public class TestRunner {
         Reporter.loadXMLConfig(reportConfigPath);
         Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
         Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-        Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
+        Reporter.setSystemInfo("Machine", "Windows 11" + "64 Bit");
         Reporter.setSystemInfo("Selenium", "4.15");
         Reporter.setSystemInfo("Maven", "3.9");
         Reporter.setSystemInfo("Java Version", "11");

@@ -16,19 +16,13 @@ public class HomePage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
+
     @CacheLookup
     @FindBy(xpath = "//div[@data-hookid='globalHeaderAccountIcon']")
-    WebElement AccountIcon;
-    @CacheLookup
-    @FindBy(xpath = "//*[@id='maincontent]/div[2]/div/div[2]/div/div[1]/a/span")
-    WebElement createAccount;
+    WebElement accountIcon;
     @CacheLookup
     @FindBy(xpath = "//button[@id='onetrust-accept-btn-handler']")
     WebElement AcceptAllCookies;
-
-    @CacheLookup
-    @FindBy(xpath = "//ul[@id='mainnavigation']/li[7]/a")
-    WebElement offers;
     @CacheLookup
     @FindBy(xpath = "//ul[@id='mainnavigation']/li[2]")
     WebElement shoes;
@@ -39,16 +33,17 @@ public class HomePage extends Utility {
     @FindBy(xpath = "//button[@id='bx-close-inside-2036729']//*[name()='svg']")
     WebElement NoThanks;
 
+    public void setAccountIcon(){
+        clickOnElement(accountIcon);
+    }
 
-    public void clickAcceptCookies() {
+    public void clickAcceptCookies() throws InterruptedException {
+        Thread.sleep(2000);
         log.info("clicking on AcceptAllCookies");
         clickOnElement(AcceptAllCookies);
     }
 
-    public void clickingOnOffers() {
-        log.info("clicking on offers");
-        clickOnElement(offers);
-    }
+
 
     public void clickShoes() {
         log.info("clicking on shoes");
@@ -57,7 +52,8 @@ public class HomePage extends Utility {
 
     public void selectingSneakers() {
         log.info("clicking on Kgkurtgeiger in shoes category");
-        mouseHoverToElementAndClick(Sneakers);
+       // mouseHoverToElementAndClick(Sneakers);
+        clickOnElement(Sneakers);
     }
 
     public void clickingNoThanks() {

@@ -34,7 +34,7 @@ public class ManageDriver {
         }
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get(baseUrl);
     }
     public void closeBrowser(){

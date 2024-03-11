@@ -17,37 +17,32 @@ public class WomenSneakersPage extends Utility {
     }
 
     @CacheLookup
-    @FindBy(xpath = "//span[normalize-space()='Sort By']")
+    @FindBy(xpath = "//button[@data-hookid='plpFilterBarSortByContainer']")
     WebElement sortBy;
 
-    @CacheLookup
-    @FindBy(xpath = "//div[@id='__next']/div[2]/main/div[4]/div/div[2]/button/span[2]")
-    WebElement filters;
+
 
     @CacheLookup
     @FindBy(xpath = "//div[@id='__next']/div/main/div[4]/div/div[3]/div/div[2]/div/label")
     WebElement bestSellers;
 
+
     @CacheLookup
-    @FindBy(xpath="//div[@id='__next']/div[2]/main/div[4]/div/div[2]/div/div[1]/div[1]/div[1]/div[2]/div[3]/div/label/span")
-    WebElement size4;
-    @CacheLookup
-    @FindBy(xpath="//div[@id='__next']/div/main/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[1]/p")
+    @FindBy(xpath="//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[1]/p")
     WebElement size;
    @CacheLookup
-    @FindBy(xpath=" //div[@id='__next']/div/main/div[3]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[2]/button[3]")
+    @FindBy(xpath="//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[2]/button[3]")
     WebElement size37;
+
+
     @CacheLookup
-    @FindBy(xpath="//div[@id='__next']/div/main/div[4]/div/div[2]/div/div[1]/div[2]/button")
-    WebElement ApplyFilters;
+    @FindBy(xpath="//p[contains(text(),'Laney Octavia Sneaker')]")
+    WebElement laneyOctaviaSneaker;
     @CacheLookup
-    @FindBy(xpath="//img[@alt='Laney Octavia Sneaker - white']")
-    WebElement LaneyOctaviaSneaker;
-    @CacheLookup
-    @FindBy(xpath="//div[@id='__next']/div[2]/main/div[3]/div[2]/div[2]/div[2]/div[1]/button")
+    @FindBy(css=".ButtonStyles__StyledButton-sc-6id8bd-0.ezlZCY.desktop")
     WebElement AddToBag;
     @CacheLookup
-    @FindBy(xpath="//*[@id=\"header\"]/div/div[1]/div[3]/div[4]/div[1]")
+    @FindBy(css=".MinibagIconStyles__StyledMinibagCount-sc-17jjqxa-1.kvXEaw")
     WebElement BagIcon;
     @CacheLookup
     @FindBy(xpath="//button[@data-hookid='viewAndCheckoutSecurelyButton']")
@@ -58,8 +53,9 @@ public class WomenSneakersPage extends Utility {
 
 
 
-    public void mouseHoverSortby() {
+    public void mouseHoverSortby() throws InterruptedException {
         log.info("MouseHover on SortBy ");
+        Thread.sleep(3000);
         mouseHoverToElement(sortBy);
     }
 
@@ -67,20 +63,14 @@ public class WomenSneakersPage extends Utility {
         log.info(" MouseHover And Click on Bestsellers ");
         mouseHoverToElementAndClick(bestSellers);
     }
-    public void mouseHoverFilters() {
-        log.info("MouseHover on Filters ");
-        mouseHoverToElement(filters);
-    }
-    public void SelectSize() {
-        log.info(" MouseHover And select size4/37 ");
-        clickOnElement(size4);
-    }
-    public void clickOnAppliedFilters(){
-        log.info(" Click on ApplyFilters ");
-        clickOnElement(ApplyFilters);
-    }public void clickOnLaneyOctaviaSneaker(){
+
+
+
+
+    public void clickOnLaneyOctaviaSneaker() throws InterruptedException {
         log.info(" Click on Laney Octavia Sneaker ");
-        clickOnElement(LaneyOctaviaSneaker);
+        Thread.sleep(5000);
+        clickOnElement(laneyOctaviaSneaker);
     }
     public void sizeSelected(){
         log.info("clicking on size and selecting it");
@@ -91,12 +81,14 @@ public class WomenSneakersPage extends Utility {
         clickOnElement(AddToBag);
     }
     public void mouseHoverOnBagIcon(){
-        log.info("clicking on BagIcon and  clicking on checkoutSecurely");
+        log.info("clicking on BagIcon");
         mouseHoverToElement(BagIcon);
+        log.info(" clicking on checkoutSecurely");
         clickOnElement(checkoutSecurely);
     }
-    public void setCheckoutSecurely1(){
+    public void setCheckoutSecurely1() throws InterruptedException {
         log.info("  clicking on checkoutSecurely");
+        Thread.sleep(2000);
         clickOnElement(checkoutSecurely1);
     }
 }
