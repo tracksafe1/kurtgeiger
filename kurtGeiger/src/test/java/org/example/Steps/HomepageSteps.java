@@ -34,7 +34,8 @@ public class HomepageSteps {
 
 
     @And("^click on Sneakers$")
-    public void clickOnSneakers(){
+    public void clickOnSneakers() {
         new HomePage().selectingSneakers();
-    }}
+    }
+}
 

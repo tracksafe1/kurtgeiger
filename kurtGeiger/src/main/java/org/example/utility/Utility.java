@@ -13,9 +13,9 @@ import java.util.Date;
 
 public class Utility extends ManageDriver {
    //  * This method will be used to hover mouse on element
-    public void mouseHoverToElement(WebElement element) {
-        new Actions(driver).moveToElement(element).build().perform();
-    }
+   public void mouseHoverToElement(WebElement element) {
+       new Actions(driver).moveToElement(element).build().perform();
+   }
     //   * This method will be used to hover mouse on element and click
     public void mouseHoverToElementAndClick(WebElement element) {
         new Actions(driver).moveToElement(element).click().build().perform();

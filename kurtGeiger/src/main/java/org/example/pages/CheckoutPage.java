@@ -18,24 +18,24 @@ public class CheckoutPage extends Utility {
     }
 
     @CacheLookup
-    @FindBy(xpath ="//input[@id='customer-email']")
+    @FindBy(xpath = "//input[@id='customer-email']")
     WebElement email;
     @CacheLookup
-    @FindBy(id ="customer-password")
+    @FindBy(id = "customer-password")
     WebElement password;
     @CacheLookup
-    @FindBy(xpath ="//button[@data-hookid='buttonSignIn']/span")
+    @FindBy(xpath = "//button[@data-hookid='buttonSignIn']/span")
     WebElement signInButton;
     @CacheLookup
-    @FindBy(xpath ="//input[@data-hookid='valueShippingMobileNo']")
+    @FindBy(xpath = "//input[@data-hookid='valueShippingMobileNo']")
     WebElement mobileNumber;
 
     @CacheLookup
-    @FindBy(xpath ="//fieldset[@id='customer-email-fieldset']/div[2]/button")
+    @FindBy(xpath = "//fieldset[@id='customer-email-fieldset']/div[2]/button")
     WebElement next;
 
     @CacheLookup
-    @FindBy(xpath ="//input[@id='to-collection-point']")
+    @FindBy(xpath = "//input[@id='to-collection-point']")
     WebElement clickAndCollectFree;
     @CacheLookup
     @FindBy(css = "#custom-checkout-form-collect [class='input-text']")

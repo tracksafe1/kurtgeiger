@@ -15,68 +15,76 @@ public class AccountsPage extends Utility {
     }
 
     @CacheLookup
-    @FindBy(xpath="//span[normalize-space()='Create Account']")
-    WebElement createAccount ;
+    @FindBy(xpath = "//span[normalize-space()='Create Account']")
+    WebElement createAccount;
     @CacheLookup
-    @FindBy(id="prefix")
-    WebElement tittle ;
+    @FindBy(id = "prefix")
+    WebElement tittle;
     @CacheLookup
-    @FindBy(id="firstname")
-    WebElement firstName ;
+    @FindBy(id = "firstname")
+    WebElement firstName;
     @CacheLookup
-    @FindBy(id="lastname")
-    WebElement lastName ;
+    @FindBy(id = "lastname")
+    WebElement lastName;
     @CacheLookup
-    @FindBy(id="email_address")
-    WebElement email ;
+    @FindBy(id = "email_address")
+    WebElement email;
     @CacheLookup
-    @FindBy(id="password")
-    WebElement password ;
+    @FindBy(id = "password")
+    WebElement password;
     @CacheLookup
-    @FindBy(id="password-confirmation")
-    WebElement confirmPassword ;
+    @FindBy(id = "password-confirmation")
+    WebElement confirmPassword;
     @CacheLookup
     @FindBy(css = "button[title='Create an account'] span")
     WebElement createAnAccountButton;
     @CacheLookup
-    @FindBy(css=".icon-address-book.item-title")
+    @FindBy(css = ".icon-address-book.item-title")
     WebElement addressBook;
 
 
-    public void clickOnCreateAccount(){
+    public void clickOnCreateAccount() {
         log.info("Click on Create Account ");
         clickOnElement(createAccount);
     }
-    public void setTittle(String Tittle){
+
+    public void setTittle(String Tittle) {
         log.info("Click on Tittle and select Tittle from Dropdown ");
         clickOnElement(tittle);
-        selectByVisibleTextFromDropDown(tittle,Tittle);
+        selectByVisibleTextFromDropDown(tittle, Tittle);
     }
-    public void setFirstName(String FirstName){
+
+    public void setFirstName(String FirstName) {
         log.info("Enter Firstname ");
-        sendTextToElement(firstName,FirstName);
+        sendTextToElement(firstName, FirstName);
     }
-    public void setLastName(String LastName){
+
+    public void setLastName(String LastName) {
         log.info("Enter LastName ");
-        sendTextToElement(lastName,LastName);
+        sendTextToElement(lastName, LastName);
     }
-    public void setEmail(String Email){
+
+    public void setEmail(String Email) {
         log.info("Enter Email ");
-        sendTextToElement(email,Email);
+        sendTextToElement(email, Email);
     }
-    public void setPassword(String Password){
+
+    public void setPassword(String Password) {
         log.info("Enter Password ");
-        sendTextToElement(password,Password);
+        sendTextToElement(password, Password);
     }
-    public void setConfirmPassword(String ConfirmPassword){
+
+    public void setConfirmPassword(String ConfirmPassword) {
         log.info("Enter confirmPassword ");
-        sendTextToElement(confirmPassword,ConfirmPassword);
+        sendTextToElement(confirmPassword, ConfirmPassword);
     }
-    public void clickOnCreateAccountButton(){
+
+    public void clickOnCreateAccountButton() {
         log.info("click on create an account button ");
         clickOnElement(createAnAccountButton);
     }
-    public void setAddressBook(){
+
+    public void setAddressBook() {
         log.info("Enter Address Book ");
         clickOnElement(addressBook);
     }

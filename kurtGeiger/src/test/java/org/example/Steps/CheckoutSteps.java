@@ -11,8 +11,8 @@ public class CheckoutSteps {
 
 
     @And("^enter Email \"([^\"]*)\"$")
-    public void enterEmail(String Email)  {
-       new CheckoutPage().setEmail(Email);
+    public void enterEmail(String Email) {
+        new CheckoutPage().setEmail(Email);
     }
 
     @And("^clicks on next$")
@@ -21,7 +21,7 @@ public class CheckoutSteps {
     }
 
     @And("^enter Password \"([^\"]*)\"$")
-    public void enterPassword(String Password)  {
+    public void enterPassword(String Password) {
         new CheckoutPage().setPassword(Password);
     }
 
@@ -31,17 +31,14 @@ public class CheckoutSteps {
     }
 
 
-
     @And("^Enter MobileNumber$")
     public void enterMobileNumber() {
         new CheckoutPage().setMobileNumber("7777777777");
-      //  driver.navigate().refresh();
     }
 
     @And("^click on click and collect Radiobutton$")
     public void clickOnClickAndCollectRadiobutton() throws InterruptedException {
         Thread.sleep(3000);
-       // new CheckoutPage().setMobileNumber("7777777777");
         new CheckoutPage().clickRadioButton();
     }
 
@@ -56,6 +53,7 @@ public class CheckoutSteps {
     public void selectOutlet() {
         new CheckoutPage().selectWatfordOutlet();
     }
+
     @Then("^click on review and pay$")
     public void clickOnReviewAndPay() throws InterruptedException {
         new CheckoutPage().setReviewAndPay();

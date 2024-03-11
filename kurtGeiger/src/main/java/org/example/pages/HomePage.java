@@ -33,7 +33,7 @@ public class HomePage extends Utility {
     @FindBy(xpath = "//button[@id='bx-close-inside-2036729']//*[name()='svg']")
     WebElement NoThanks;
 
-    public void setAccountIcon(){
+    public void setAccountIcon() {
         clickOnElement(accountIcon);
     }
 
@@ -44,7 +44,6 @@ public class HomePage extends Utility {
     }
 
 
-
     public void clickShoes() {
         log.info("clicking on shoes");
         mouseHoverToElement(shoes);
@@ -52,7 +51,7 @@ public class HomePage extends Utility {
 
     public void selectingSneakers() {
         log.info("clicking on Kgkurtgeiger in shoes category");
-       // mouseHoverToElementAndClick(Sneakers);
+        // mouseHoverToElementAndClick(Sneakers);
         clickOnElement(Sneakers);
     }
 
@@ -60,7 +59,6 @@ public class HomePage extends Utility {
         log.info("clicking on NoThanks");
         clickOnElement(NoThanks);
     }
-
 
 
 }

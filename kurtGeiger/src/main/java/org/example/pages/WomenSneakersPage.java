@@ -21,36 +21,34 @@ public class WomenSneakersPage extends Utility {
     WebElement sortBy;
 
 
-
     @CacheLookup
     @FindBy(xpath = "//div[@id='__next']/div/main/div[4]/div/div[3]/div/div[2]/div/label")
     WebElement bestSellers;
 
 
     @CacheLookup
-    @FindBy(xpath="//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[1]/p")
+    @FindBy(xpath = "//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[1]/p")
     WebElement size;
-   @CacheLookup
-    @FindBy(xpath="//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[2]/button[3]")
+    @CacheLookup
+    @FindBy(xpath = "//div[@data-hookid='pdpContentContainer']/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div/div[2]/button[3]")
     WebElement size37;
 
 
     @CacheLookup
-    @FindBy(xpath="//p[contains(text(),'Laney Octavia Sneaker')]")
+    @FindBy(xpath = "//p[contains(text(),'Laney Octavia Sneaker')]")
     WebElement laneyOctaviaSneaker;
     @CacheLookup
-    @FindBy(css=".ButtonStyles__StyledButton-sc-6id8bd-0.ezlZCY.desktop")
+    @FindBy(css = ".ButtonStyles__StyledButton-sc-6id8bd-0.ezlZCY.desktop")
     WebElement AddToBag;
     @CacheLookup
-    @FindBy(css=".MinibagIconStyles__StyledMinibagCount-sc-17jjqxa-1.kvXEaw")
+    @FindBy(css = ".MinibagIconStyles__StyledMinibagCount-sc-17jjqxa-1.kvXEaw")
     WebElement BagIcon;
     @CacheLookup
-    @FindBy(xpath="//button[@data-hookid='viewAndCheckoutSecurelyButton']")
+    @FindBy(xpath = "//button[@data-hookid='viewAndCheckoutSecurelyButton']")
     WebElement checkoutSecurely;
     @CacheLookup
-    @FindBy(xpath="//button[@data-hookid='checkoutButton']")
+    @FindBy(xpath = "//button[@data-hookid='checkoutButton']")
     WebElement checkoutSecurely1;
-
 
 
     public void mouseHoverSortby() throws InterruptedException {
@@ -65,27 +63,29 @@ public class WomenSneakersPage extends Utility {
     }
 
 
-
-
     public void clickOnLaneyOctaviaSneaker() throws InterruptedException {
         log.info(" Click on Laney Octavia Sneaker ");
         Thread.sleep(5000);
         clickOnElement(laneyOctaviaSneaker);
     }
-    public void sizeSelected(){
+
+    public void sizeSelected() {
         log.info("clicking on size and selecting it");
-       clickOnElement(size);
-       clickOnElement(size37);
+        clickOnElement(size);
+        clickOnElement(size37);
     }
-    public void clickAddToBag(){
+
+    public void clickAddToBag() {
         clickOnElement(AddToBag);
     }
-    public void mouseHoverOnBagIcon(){
+
+    public void mouseHoverOnBagIcon() {
         log.info("clicking on BagIcon");
         mouseHoverToElement(BagIcon);
         log.info(" clicking on checkoutSecurely");
         clickOnElement(checkoutSecurely);
     }
+
     public void setCheckoutSecurely1() throws InterruptedException {
         log.info("  clicking on checkoutSecurely");
         Thread.sleep(2000);
